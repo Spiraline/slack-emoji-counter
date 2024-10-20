@@ -237,7 +237,7 @@ class EmojiCounter:
 
     with open('unused_emoji.csv', 'w', newline='', encoding='utf-8-sig') as f:
       writer = csv.writer(f)
-      for emoji in self._custom_emoji_set:
+      for emoji in sorted(self._custom_emoji_set):
         writer.writerow([':' + emoji + ':'])
     
     print(f'안 쓰는 커스텀 이모지 수: {len(self._custom_emoji_set)}')
