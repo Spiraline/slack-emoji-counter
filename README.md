@@ -13,6 +13,7 @@ slack workspace의 public 채널에 있는 이모지 사용량 측정기
 python slack_emoji_counter.py -t xoxp-...
 ```
 xoxp-...으로 되어있는 부분에 본인의 Slack OAuth Access Token을 써넣고 실행하면 된다.
+[OAuth Access Token 다운받는 법](https://velog.io/@spiraline/slack-emoji-counter)
 
 ### Output
 - emoji_usage.csv: 이모지 사용량 정보
