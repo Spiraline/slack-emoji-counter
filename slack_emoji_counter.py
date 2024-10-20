@@ -215,7 +215,7 @@ class EmojiCounter:
     unused_emoji.csv에는 inline + reaction으로 사용되지 않은 이모지 목록을 출력함.
     """
     
-    with open('emoji_usage.csv', 'w') as f:
+    with open('emoji_usage.csv', 'w', newline='', encoding='utf-8-sig') as f:
       writer = csv.writer(f)
       writer.writerow(["Emoji",
                        "is_custom",
@@ -235,7 +235,7 @@ class EmojiCounter:
         if emoji in self._custom_emoji_set:
           self._custom_emoji_set.remove(emoji)
 
-    with open('unused_emoji.csv', 'w') as f:
+    with open('unused_emoji.csv', 'w', newline='', encoding='utf-8-sig') as f:
       writer = csv.writer(f)
       for emoji in self._custom_emoji_set:
         writer.writerow([':' + emoji + ':'])
